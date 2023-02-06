@@ -1,5 +1,5 @@
 #data_path
-read -p "data_path:" path
+read -p "data_path-256B:" path
 
 mkdir ${path}
 
