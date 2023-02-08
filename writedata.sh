@@ -1,6 +1,6 @@
  #!/bin/bash
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-declare -i data=${2}\*1024\*1024\*1024\${3}
+declare -i data=${2}\*1024\*1024\*1024\/${3}
 ./db_bench --benchmarks="fillrandom,stats,levelstats" \
 --db=${1}/${3}B/${2}G \
 --value_size=${3} --key_size=16 --enable_pipelined_write=true \
